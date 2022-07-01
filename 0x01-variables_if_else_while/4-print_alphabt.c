@@ -14,16 +14,12 @@ int main(void)
 
 	while (a <= 122)
 	{
-		putchar(a);
+		if (a != 101 && a != 113)
+		{
+			putchar(a);
+		}
 		a++;
-	};
-
-	while (b <= 90)
-	{
-		putchar(b);
-		b++;
-	};
-
+	}
 	putchar('\n');
 	return (0);
 }
