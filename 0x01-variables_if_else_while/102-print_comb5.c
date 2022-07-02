@@ -29,11 +29,11 @@ int main(void)
 			if (a < c || (a == c && b < d))
 			{
 				putchar(a + '0');
-				putchar(b + '0'); 
-				putchar(' '); 
-				putchar(c + '0'); 
+				putchar(b + '0');
+				putchar(' ');
+				putchar(c + '0');
 				putchar(d + '0');
-			       if (!(a == 9 && b == 8))
+				if (!(a == 9 && b == 8))
 				{
 					putchar(',');
 					putchar(' ');
