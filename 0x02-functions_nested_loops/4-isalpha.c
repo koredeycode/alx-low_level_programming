@@ -1,6 +1,9 @@
 #include "main.h"
 /**
- * _islower - Check if the parameter is lowercase or not.
+ * _isalpha - Check if the parameter is lowercase or not
+ *
+ * @c: parameter of the int type
+ *
  * Return: 0
  */
 int _isalpha(int c)
