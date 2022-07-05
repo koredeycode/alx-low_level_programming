@@ -1,23 +1,20 @@
-#include <stdio.h>
 #include "main.h"
 /**
- * main - contains the if statement
- *
- * Return:always return 0
- *
-*/
+ * main - Print "_putchar" followed by a new line.
+ * Description: You are not allowed to include standared libraries.
+ * Return: 0
+ */
 int main(void)
 {
-	char word[] = "_putchar";
-	int i = 0;
+char putchar[] = "_putchar";
+int i = 0;
 
-	while (i < 8)
-	{
-		
-		_putchar(word[i]);
-		i++;
-	};
-	_putchar('\n');
+while (putchar[i] != '\0')
+{
+_putchar(putchar[i]);
+i++;
+}
+_putchar('\n');
 
-	return (0);
+return (0);
 }
