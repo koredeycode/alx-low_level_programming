@@ -1,35 +1,31 @@
 #include <stdio.h>
 /**
- * main - print first 98 fibonnaci numbers
+ * main - main function
  *
- *
- * Return: 0
+ * Return: nothing
  */
 int main(void)
 {
-	long int first = 1;
-	long int second = 2;
-	int count = 2;
-	long int sum;
+	int counter = 2;
 
-	printf("%lu, %lu,", first, second);
+	float a = 1;
+	float b = a + 1;
+	float c = a + b;
 
-	while (count < 98)
+	printf("%.0f, ", a);
+	printf("%.0f, ", b);
+	while (counter < 98)
 	{
-		sum = first + second;
-
-		if (count != 96)
+		counter++;
+		printf("%.0f", c);
+		a = b;
+		b = c;
+		c = a + b;
+		if (counter < 98)
 		{
-			printf(" %lu,", sum);
+			printf(", ");
 		}
-		else
-		{
-			printf(" %lu", sum);
-		}
-	first = second;
-	second = sum;
-	count++;
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
