@@ -39,6 +39,7 @@ if (n <= 15 && n != 0)
 		}
 			b++;
 		}
+	putchar('\n');
 	a++;
 	}
 	_putchar('\n');
