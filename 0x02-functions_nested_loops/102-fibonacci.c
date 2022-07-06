@@ -8,23 +8,24 @@
  */
 int main(void)
 {
-	int a = 1;
-	int b = 2;
+	long int a = 1;
+	long int b = 2;
 	int count = 1;
 	
-	printf("%d, %d ", a, b);
+	printf("%lu, %lu, ", a, b);
 
 	while (count <= 48)
 	{
-		int sum;
+		long int sum;
+
 		sum = a + b;
 		if (count != 48)
 		{
-			printf("%d, ", sum);
+			printf("%lu, ", sum);
 		}
 		else
 		{
-			printf("%d\n", sum);
+			printf("%lu\n", sum);
 		}
 	a = b;
 	b = sum;
