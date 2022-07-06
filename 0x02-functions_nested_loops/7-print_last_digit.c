@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _print_last_digit - returns the absolute value of the parameter
+ * print_last_digit - returns the absolute value of the parameter
  *
  * @n: parameter of the int type
  *
@@ -8,13 +8,18 @@
  */
 int print_last_digit(int n)
 {
-	n = n % 10;
-	if (n >= 0)
+	int nn;
+
+	if (n < 0)
 	{
-		return (n);
+		nn = -1 * (n % 10);
+		_putchar(nn + '0');
+		return (nn);
 	}
 	else
 	{
-		return (n * -1);
+		nn = n % 10;
+		_putchar(nn + '0');
+		return (nn);
 	};
 }
