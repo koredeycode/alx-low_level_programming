@@ -13,6 +13,9 @@ int main(void)
 
 	while (n < 1024)
 	{
+		int a;
+		int b;
+
 		a = n % 3;
 		b = n % 5;
 
