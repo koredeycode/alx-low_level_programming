@@ -1,7 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * times_table - prints multiplication tables of 0-9
+ * print_times_table - prints multiplication tables of 0-9
+ *
+ * @n : integer type variable
  *
  * Return: 0
  */
@@ -20,6 +22,8 @@ if (n <= 15 && n != 0)
 		{
 			res = a * b;
 
+		if (b != 9)
+		{
 			if (res <= 99)
 			{
 				printf("%d,   ", res);
@@ -28,10 +32,15 @@ if (n <= 15 && n != 0)
 			{
 				printf("%d,  ", res);
 			}
-			}
+		}
+		else
+		{
+			printf("%d", res);
+		}
 			b++;
+		}
+	a++;
 	}
 	_putchar('\n');
-	a++;
 }
 }
