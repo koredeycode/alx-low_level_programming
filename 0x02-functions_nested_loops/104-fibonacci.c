@@ -9,12 +9,12 @@ int main(void)
 {
 	long int first = 1;
 	long int second = 2;
-	int count = 1;
+	int count = 2;
 	long int sum;
-	
+
 	printf("%lu, %lu,", first, second);
 
-	while (count <= 96)
+	while (count < 98)
 	{
 		sum = first + second;
 
