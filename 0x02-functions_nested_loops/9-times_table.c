@@ -16,14 +16,14 @@ void times_table(void)
 		while (b <= 9)
 		{
 			res = a * b;
-			
+
 			if (b == 0)
 			{
 				_putchar('0');
 			}
 			else if (res <= 9)
 			{
-				_putchar(';');
+				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
 				_putchar(res + '0');
