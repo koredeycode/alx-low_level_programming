@@ -8,28 +8,21 @@
  */
 int main(void)
 {
-	long int a = 1;
-	long int b = 2;
-	int count = 1;
+	int a = 1;
+	int b = 2;
+	int sum;
+	int c;
 
-	printf("%lu, %lu, ", a, b);
-
-	while (count <= 48)
+	while (b < 4000000)
 	{
-		long int sum;
-
-		sum = a + b;
-		if (count != 48)
+		if (b % 2 == 0)
 		{
-			printf("%lu, ", sum);
+			sum = sum + b;
 		}
-		else
-		{
-			printf("%lu\n", sum);
-		}
-	a = b;
-	b = sum;
-	count++;
+	c = b;
+	b = b + a;
+	a = c;
 	}
+	printf("%d\n", total);
 	return (0);
 }
