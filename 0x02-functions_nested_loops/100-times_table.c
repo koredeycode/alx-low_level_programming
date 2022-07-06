@@ -24,7 +24,7 @@ if (n <= 15 && n != 0)
 
 		if (b != 9)
 		{
-			if (res <= 99)
+			if (res <= 9)
 			{
 				printf("%d,   ", res);
 			}
