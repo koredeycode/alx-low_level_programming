@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print_diagonal - print line with length dependent of the input n
- * @n: the integer, number of times the diagonal is printed
+ * print_square - print a square with length dependent of the input n
+ * @size: the integer, number of times the diagonal is printed
  */
 
-void print_diagonal(int n)
+void print_square(int size)
 {
 	if (n <= 0)
 	{
@@ -18,9 +18,9 @@ void print_diagonal(int n)
 		{
 			int a = 1;
 
-			while (a <= (b-1))
+			while (a <= n)
 			{
-				_putchar(' ');
+				_putchar('');
 				a++;
 			}
 			_putchar('\\');
