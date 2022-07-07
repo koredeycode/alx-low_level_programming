@@ -2,7 +2,6 @@
 /**
  * print_diagonal - print line with length dependent of the input n
  * @n: the integer, number of times the diagonal is printed
- * Return: (0)
  */
 
 void print_diagonal(int n)
