@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _print_rev - print out a string to stdout but in reverse
+ * print_rev - print out a string to stdout but in reverse
  * @s: pointer, a character
  * Return: nothing
  */
@@ -16,7 +16,7 @@ void print_rev(char *s)
 		i++;
 	}
 	j = i - 1;
-	while (j >= 0 )
+	while (j >= 0)
 	{
 		_putchar(s[j]);
 		j--;
