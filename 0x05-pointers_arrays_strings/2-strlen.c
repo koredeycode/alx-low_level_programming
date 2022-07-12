@@ -2,7 +2,7 @@
 /**
  * _strlen - reset the values of the inputs
  * @s: pointer, a character
- * Return: nothing
+ * Return: the length of the string
  */
 
 int _strlen(char *s)
