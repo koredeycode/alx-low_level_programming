@@ -8,5 +8,7 @@
 
 void print_array(int *a, int n)
 {
-	printf("%p, %d", a, n);
+	int i = *a
+
+	printf("%d, %d", i, n);
 }
