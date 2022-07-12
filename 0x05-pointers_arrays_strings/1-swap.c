@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
- * reset_to_98 - reset the value of input to 98.
- * @n: pointer, an integer
+ * swap_int - reset the values of the inputs
+ * @a: pointer, an integer
+ * @b: pointer, an integer
  * Return: nothing
  */
 
