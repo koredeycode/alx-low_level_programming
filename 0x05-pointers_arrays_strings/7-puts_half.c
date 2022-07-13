@@ -17,20 +17,22 @@ void puts_half(char *str)
 	{
 		int j = i / 2;
 
-		while (j <= i)
+		while (j < i)
 		{
 			printf("%c", str[j]);
 			j++;
 		}
+		printf("\n");
 	}
 	else
 	{
 		int k = (i - 1) / 2;
 
-		while (k <= i)
+		while (k < i)
 		{
 			printf("%c", str[k]);
 			k++;
 		}
+		printf("\n");
 	}
 }
