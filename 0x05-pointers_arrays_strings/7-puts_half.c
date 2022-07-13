@@ -20,9 +20,9 @@ void puts_half(char *str)
 		while (j <= i)
 		{
 			printf("%c", str[j]);
+			printf("\n");
 			j++;
 		}
-		printf("\n");
 	}
 	else
 	{
@@ -31,8 +31,8 @@ void puts_half(char *str)
 		while (k <= i)
 		{
 			printf("%c", str[k]);
+			printf("\n");
 			k++;
 		}
-		printf("\n");
 	}
 }
