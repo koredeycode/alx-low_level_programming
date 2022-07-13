@@ -20,7 +20,6 @@ void puts_half(char *str)
 		while (j <= i)
 		{
 			printf("%c", str[j]);
-			printf("\n");
 			j++;
 		}
 	}
@@ -31,7 +30,6 @@ void puts_half(char *str)
 		while (k <= i)
 		{
 			printf("%c", str[k]);
-			printf("\n");
 			k++;
 		}
 	}
