@@ -1,38 +1,28 @@
-#include "main.h"
+#include <stdio.h>
+#include <string.h>
 /**
- * _indexOf - returns boolean if special  character
- * @a: character to return
- * Return: true or false
+ * cap_string - capitalize words in a string
+ * @n: character type
+ * Return: uppercase letter
  */
-int _indexOf(char a)
+char *cap_string(char *n)
 {
-	int i;
-	char capArr[13] = {'\n', '\t', ' ', '.', ',', ';', ',', '!', '?', '(',
-')', '{', '}'};
-
-	for (i = 0; i < 13; i++)
-	{
-		if (capArr[i] == a)
-			return (1);
-	}
-	return (0);
-}
-/**
- * cap_string - capitalizes the string
- * @s: string
- * Return: the string capitalized
- */
-char *cap_string(char *s)
-{
+	int n_len = strlen(n);
 	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; i < n_len; i++)
 	{
-		if (_indexOf(s[i]))
-			continue;
-		if (s[i] >= 'a' && s[i] <= 'z' && (_indexOf(s[i - 1]) || i == 0))
-			s[i] = s[i] - 32;
-
+		if (n[i] == ' ' || n[i] == '\t' || n[i] == '\n'
+		|| n[i] == ',' || n[i] == ';' || n[i] == '.'
+		|| n[i] == '!' || n[i] == '?' || n[i] == '"'
+		|| n[i] == '(' || n[i] == ')' || n[i] == '{'
+		|| n[i] == '}')
+		{
+			if (n[i + 1] >= 'a' && n[i + 1] <= 'z' || i = 0)
+			{
+				n[i + 1] = n[i + 1] - 32;
+			}
+		}
 	}
-	return (s);
+	return (n);
 }
