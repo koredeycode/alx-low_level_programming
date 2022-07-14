@@ -1,23 +1,29 @@
 #include <stdio.h>
 /**
- * _strcpy - reset the values of the inputs
+ * _strcat - concatenate two inputted strings
  * @dest: pointer, a character
  * @src: pointer, a character
- * Return: the length of the string
+ * Return: the concatenated result
  */
 
-char *_strcpy(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
-	int count = 0;
+	int countd = 0;
+	int counts = 0;
 
-	while (count >= 0)
+	while (dest[countd] != '\0')
 	{
-		dest[count] =  src[count];
-		if (src[count] == '\0')
+		countd++;
+	}
+	while (counts >= 0)
+	{
+		dest[countd] = src[counts];
+		if (src[counts] == '\0')
 		{
 			break;
 		}
-		count++;
+		countd++;
+		counts++;
 	}
 	return (dest);
 }
