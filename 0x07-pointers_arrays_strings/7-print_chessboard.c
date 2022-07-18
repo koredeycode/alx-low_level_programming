@@ -1,10 +1,9 @@
 #include "main.h"
 /**
- * _strchr- function that locates a character in a string
- * @s: pointer, string
- * @c: a character parameter
+ * print_chessboard - print a chessboard
+ * @a: a character parameter
  *
- * Return: a pointer
+ * Return: nothing
  */
 void print_chessboard(char (*a)[8])
 {
