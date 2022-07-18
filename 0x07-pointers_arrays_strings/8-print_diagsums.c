@@ -1,8 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_chessboard - print a chessboard
- * @a: a character parameter
+ * print_diagsums - print a chessboard
+ * @a: an integer pointer
+ * @size: an int parameter
  *
  * Return: nothing
  */
