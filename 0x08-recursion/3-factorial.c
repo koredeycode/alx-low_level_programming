@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _print_rev_recursion - prints a string in reverse
- * @s: an char pointer parameter
+ * factorial - returns the factorial of a given number
+ * @n: integer parameter
  *
- * Return: nothing
+ * Return: an integer
  */
 int factorial(int n)
 {
