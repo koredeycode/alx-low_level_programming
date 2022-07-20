@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _sqhelp - returns the natural square root of a number, helper func 
+ * _sqhelp - returns the natural square root of a number, helper func
  * @num: an integer parameter
  * @t: an integer parameter
  *
@@ -11,7 +11,7 @@ int _sqhelp(int num, int t)
 {
 	if (t % (num / t) == 0)
 	{
-		if ( t * (num / t) == num)
+		if (t * (num / t) == num)
 		{
 			return (t);
 		}
@@ -23,7 +23,7 @@ int _sqhelp(int num, int t)
 	return (0 + _sqhelp(num, (t + 1)));
 }
 /**
- * _sqrt_recursion - returns the natural square root of a number 
+ * _sqrt_recursion - returns the natural square root of a number
  * @n: an integer parameter
  *
  * Return: an integer
