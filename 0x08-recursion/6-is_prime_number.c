@@ -23,7 +23,7 @@ int _primhelp(int num, int t)
 	return (0 + _primhelp(num, (t + 1)));
 }
 /**
- * _sqrt_recursion - returns if a number is prime or not
+ * is_prime_number - returns if a number is prime or not
  * @n: an integer parameter
  *
  * Return: an integer
