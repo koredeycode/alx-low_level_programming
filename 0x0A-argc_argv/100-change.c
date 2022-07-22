@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	int j = 0;
 	int count = 0;
 	int denomination[] = {25, 10, 5, 2, 1};
-	
+
 	/*argc = argc;*/
 	if (argc != 2)
 	{
