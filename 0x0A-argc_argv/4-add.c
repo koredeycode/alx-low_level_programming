@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * isnum - check if the string elements are all integers
+ * @str: the inputted string
+ * Return: the ret- return value
+ */
 int isnum(char *str)
 {
 	int i;
@@ -19,7 +24,7 @@ int isnum(char *str)
 	return (ret);
 }
 /**
- * main - add positive numbers and print result 
+ * main - add positive numbers and print result
  * @argc: the argument count
  * @argv: the argument vector
  * Return: always 0
@@ -42,7 +47,7 @@ int main(int argc, char *argv[])
 			{
 				printf("Error\n");
 				return (1);
-				break;
+				/*break;*/
 			}
 			else
 			{
