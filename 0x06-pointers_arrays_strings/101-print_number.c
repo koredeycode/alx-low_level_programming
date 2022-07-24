@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include "main.h"
-
+/**
+ * _power - return the power of a number
+ * @base: the base number
+ * @exp: the exponential
+ * Return: an integer
+ */
 int _power(int base, int exp)
 {
 	int result = 1;
-	
+
 	while (exp != 0)
 	{
 		result *= base;
@@ -13,6 +18,11 @@ int _power(int base, int exp)
 	return (result);
 }
 
+/**
+ * print_number - print a number
+ * @n: inputted number
+ * Return: nothing
+ */
 void print_number(int n)
 {
 	int x;
