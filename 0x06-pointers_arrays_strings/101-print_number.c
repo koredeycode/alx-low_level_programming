@@ -25,17 +25,22 @@ int _power(int base, int exp)
  */
 void print_number(int n)
 {
-	int x;
-	int count = 1;
-	int i;
-	int j;
+	unsigned int m;
+	unsigned int x;
+	unsigned int count = 1;
+	unsigned int i;
+	unsigned int j;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		m = -n;
 	}
-	x = n;
+	else
+	{
+		m = n;
+	}
+	x = m;
 	while (x / 10 != 0)
 	{
 		count++;
@@ -44,7 +49,7 @@ void print_number(int n)
 	x = count - 1;
 	for (i = 0; i < count; i++)
 	{
-		j = n / (_power(10, x));
+		j = m / (_power(10, x));
 		j %= 10;
 		_putchar(j + '0');
 		x--;
