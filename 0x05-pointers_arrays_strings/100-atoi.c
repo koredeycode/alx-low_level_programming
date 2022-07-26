@@ -49,6 +49,7 @@ int _atoi(char *s)
 	unsigned int count;
 	unsigned int mul = 1;
 	unsigned int res = 0;
+
 	if (containNum(s) > 0)
 	{
 		for (i = 0; !(s[i] >= 48 && s[i] <= 57); i++)
