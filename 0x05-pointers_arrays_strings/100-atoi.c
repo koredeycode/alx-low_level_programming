@@ -24,11 +24,11 @@ int _power(int base, int exp)
  */
 int _atoi(char *s)
 {
-	int i;
-	int j;
-	int count;
-	int mul = 1;
-	int res = 0;
+	unsigned int i;
+	unsigned int j;
+	unsigned int count;
+	unsigned int mul = 1;
+	unsigned int res = 0;
 
 	for (i = 0; !(s[i] >= 48 && s[i] <= 57); i++)
 	{
