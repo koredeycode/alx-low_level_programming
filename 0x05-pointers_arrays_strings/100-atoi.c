@@ -49,31 +49,31 @@ int _atoi(char *s)
 	unsigned int count;
 	unsigned int mul = 1;
 	unsigned int res = 0;
-if (containNum(s) > 0)
-{
-	for (i = 0; !(s[i] >= 48 && s[i] <= 57); i++)
+	if (containNum(s) > 0)
 	{
-		if (s[i] == '-')
+		for (i = 0; !(s[i] >= 48 && s[i] <= 57); i++)
 		{
-			mul *= -1;
+			if (s[i] == '-')
+			{
+				mul *= -1;
+			}
 		}
+		j = i;
+		while (s[j] >= 48 && s[j] <= 57)
+		{
+			j++;
+		}
+		/*for (j = i; s[j] >= 48 && s[j] <= 57; j++);*/
+		count = j - i - 1;
+		for (j = i; s[j] >= 48 && s[j] <= 57; j++)
+		{
+			res += (s[j] - '0') * _power(10, count);
+			count--;
+		}
+		return (res * mul);
 	}
-	j = i;
-	while (s[j] >= 48 && s[j] <= 57)
+	else
 	{
-		j++;
+		return (0);
 	}
-	/*for (j = i; s[j] >= 48 && s[j] <= 57; j++);*/
-	count = j - i - 1;
-	for (j = i; s[j] >= 48 && s[j] <= 57; j++)
-	{
-		res += (s[j] - '0') * _power(10, count);
-		count--;
-	}
-	return (res * mul);
-}
-else
-{
-	return (0);
-}
 }
