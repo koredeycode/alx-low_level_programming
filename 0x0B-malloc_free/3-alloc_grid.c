@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/**
+ * alloc_grid - return a pointer to a 2 dimensional array of integer
+ * @width: width of the output
+ * @height: sheight of the output
+ * Return: the 2-D array
+ */
+int **alloc_grid(int width, int height)
+{
+	int h;
+	int i;
+	int w;
+	int **strout;
+
+	if (width <= 0 || height <= 0)
+	{
+		return(NULL);
+	}
+	strout = malloc(height * sizeof(int *));
+	if (strout == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < width; i++)
+	{
+		strout[i] = malloc(width * sizeof(int));
+		if (strout[i] == NULL)
+		{
+			return (NULL);
+		}
+	}
+	for (h = 0; h < height; h++)
+	{
+		for (w = 0; w < width; w++)
+		{
+			strout[h][w] = 0;
+		}
+	}
+	return (strout);
+}
