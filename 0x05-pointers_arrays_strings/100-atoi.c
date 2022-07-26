@@ -18,6 +18,26 @@ int _power(int base, int exp)
 	return (res);
 }
 /**
+ * containNum - check if the inputted string contains a num
+ * @s: the inputted string
+ * Return: a string
+ */
+int containNum(char *s)
+{
+	int i;
+	int res = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (s[i] >= 48 && s[i] <= 57)
+		{
+			res += 1;
+			break;
+		}
+	}
+	return (res);
+}
+/**
  * _atoi - convert a string to an integer
  * @s: a string of character
  * Return: the integer
@@ -29,7 +49,8 @@ int _atoi(char *s)
 	unsigned int count;
 	unsigned int mul = 1;
 	unsigned int res = 0;
-
+if (containNum(s) > 0)
+{
 	for (i = 0; !(s[i] >= 48 && s[i] <= 57); i++)
 	{
 		if (s[i] == '-')
@@ -50,4 +71,9 @@ int _atoi(char *s)
 		count--;
 	}
 	return (res * mul);
+}
+else
+{
+	return (0);
+}
 }
