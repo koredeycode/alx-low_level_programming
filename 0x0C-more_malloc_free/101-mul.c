@@ -8,16 +8,16 @@ void main(int argc, char **argv)
 
 	if (argc == 3)
 	{
-		/*if (isdigit(a) == 0 && isdigit(b) == 0)
+		if (isdigit(a) == 1 && isdigit(b) == 1)
 		{
 			printf("Error\n");
 			exit(98);
-		}*/
+		}
 		printf("%ld\n", a * b);
 	}
 	else
 	{
 		printf("Error\n");
-		/*exit (98);*/
+		exit (98);
 	}
 }
