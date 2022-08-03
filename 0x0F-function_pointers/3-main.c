@@ -8,8 +8,8 @@
  */
 int main(int argc, char **argv)
 {
-	int first = atoi(argv[1]);
-	int second = atoi(argv[3]);
+	int first;
+	int second;
 	int (*ptr)(int, int);
 
 	if (argc != 4)
@@ -28,6 +28,8 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(99);
 	}
+	first = atoi(argv[1]);
+	second = atoi(argv[3]);
 	printf("%d\n", ptr(first, second));
 	return (0);
 }
