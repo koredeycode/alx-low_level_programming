@@ -1,8 +1,10 @@
 #include "lists.h"
 /**
- * sum_listint - return the sum of all the data (n) of a listint_t
- * @head: pointer of the listint_t list
- * Return: sum and 0 if list is empty
+ * insert_nodeint_at_index - insert a new node at a given position
+ * @head: pointer to the head of the listint_t list
+ * @idx: index where the data is to be added
+ * @n: the data (int) to be added
+ * Return: address of the list
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
