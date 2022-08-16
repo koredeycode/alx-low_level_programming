@@ -18,20 +18,20 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			prv = prv->next;
 		}
 	}
-	if (prv == NULL || (prev->next == NULL && index != 0))
+	if (prv == NULL || (prv->next == NULL && index != 0))
 	{
 		return (-1);
 	}
 	nxt = prv->next;
 	if (index != 0)
 	{
-		prv-next = nxt->next;
+		prv->next = nxt->next;
 		free(nxt);
 	}
 	else
 	{
-		free(prev);
-		*head = next;
+		free(prv);
+		*head = nxt;
 	}
 	return (1);
 }
