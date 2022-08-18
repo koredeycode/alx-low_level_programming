@@ -52,6 +52,8 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	}
 	ret = atoi(b);
+	if (ret == 0)
+		return (ret);
 	while (ret != 0)
 	{
 		sum += (ret % 10) * _power(2, i);
