@@ -32,7 +32,7 @@ void _copy(char *src, char *dest)
 			exit(99);
 		}
 		w = write(fd2, buff, c);
-		if (w == 1)
+		if (w == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
 			exit(99);
