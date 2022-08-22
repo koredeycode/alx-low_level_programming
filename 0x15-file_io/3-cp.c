@@ -29,7 +29,7 @@ void _copy(char *src, char *dest)
 		if (c == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
-			exit(99);
+			exit(98);
 		}
 		w = write(fd2, buff, c);
 		if (w == -1)
