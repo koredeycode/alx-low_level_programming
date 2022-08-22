@@ -8,7 +8,7 @@ void _copy(char *src, char *dest)
 {
 	int fd, fd2, cclose;
 	char buff[1024];
-	ssize_t w, c;
+	ssize_t w, c = 1024;
 
 	fd = open(src, O_RDONLY);
 	if (fd == -1)
@@ -22,7 +22,6 @@ void _copy(char *src, char *dest)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
 		exit(99);
 	}
-	c = 1024;
 	while (c == 1024)
 	{
 		c = read(fd, buff, 1024);
@@ -40,18 +39,20 @@ void _copy(char *src, char *dest)
 	}
 	cclose = close(fd2);
 	if (cclose == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
-		exit(100);
-	}
+		closerFunc(fd2);
 	cclose = close(fd);
 	if (cclose == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
+		closerFunc(fd);
 }
-
+/**
+ * closerFunc - helper function for closing fds
+ * @n: file descriptor integer
+ */
+void closerFunc(int n)
+{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", n);
+	exit(100);
+}
 /**
  * main - entry point for the program
  * @argc: argument count
