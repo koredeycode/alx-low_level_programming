@@ -29,7 +29,7 @@ void _copy(char *src, char *dest)
 		w = write(fd2, buff, c);
 		if (w == 1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", dest);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
 			exit(99);
 		}
 	}
