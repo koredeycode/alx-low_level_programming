@@ -17,6 +17,11 @@ void _copy(char *src, char *dest)
 		exit(98);
 	}
 	fd2 = open(dest, O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 00664);
+	if (fd2 == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
+		exit(99);
+	}
 	c = 1024;
 	while (c == 1024)
 	{
