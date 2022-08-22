@@ -1,5 +1,14 @@
 #include "main.h"
 /**
+ * closerFunc - helper function for closing fds
+ * @n: file descriptor integer
+ */
+void closerFunc(int n)
+{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", n);
+	exit(100);
+}
+/**
  * _copy - copy contents of src to dest
  * @src: the source file
  * @dest: the destination file
@@ -43,15 +52,6 @@ void _copy(char *src, char *dest)
 	cclose = close(fd);
 	if (cclose == -1)
 		closerFunc(fd);
-}
-/**
- * closerFunc - helper function for closing fds
- * @n: file descriptor integer
- */
-void closerFunc(int n)
-{
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", n);
-	exit(100);
 }
 /**
  * main - entry point for the program
