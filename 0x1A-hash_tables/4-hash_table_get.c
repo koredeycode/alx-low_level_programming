@@ -7,8 +7,11 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	hash_node_t *hn = ht->array[key_index((const unsigned char *)key, ht->size)];
+	hash_node_t *hn;
 
+	if (ht == NULL || key == NULL)
+		return (NULL)
+	hn = ht->array[key_index((const unsigned char *)key, ht->size)];
 	if (hn == NULL)
 	{
 		return (NULL);
