@@ -1,6 +1,18 @@
 #include <math.h>
 #include <stdio.h>
-
+/**
+ * min - my implementation of the min function
+ * @A: first parameter
+ * @B: second parameter
+ * Return: the lesser value
+ */
+size_t min(size_t A, size_t B)
+{
+	if (A < B)
+		return (A);
+	else
+		return (B);
+}
 /**
  * printarray - print the array
  * @array: array to be printed
@@ -74,5 +86,5 @@ int exponential_search(int *array, size_t size, int value)
 		else
 			break;
 	}
-	return (binarySearch(array, value, i / 2, (size_t)fmin(i, high)));
+	return (binarySearch(array, value, i / 2, min(i, high)));
 }
