@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include "search_algos.h"
 
+/**
+ * helper - help in traversing the list
+ * @list: the list to be traversed
+ * @iteration: the count
+ * Return: the pointer to the current node
+ */
 listint_t *helper(listint_t *list, size_t iteration)
 {
 	size_t i;
@@ -27,23 +33,26 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	if (!list)
 		return (NULL);
 	iter = helper(list, b);
-	while (iter && iter->index < size && iter->n < value)
+	while (iter->index < size && iter->n < value)
 	{
 		printf("Value checked at index [%ld] = [%d]\n", iter->index, iter->n);
 		sqt = iter->index;
 		iter = helper(iter, b);
+		if (!iter->next)
+			break;
 	}
 	printf("Value checked at index [%ld] = [%d]\n", iter->index, iter->n);
 	printf("Value found between indexes [%ld] and [%ld]\n", sqt, iter->index);
 
 	iter = helper(list, sqt);
-	while (iter && iter->index < size && iter->n < value)
+	while (iter->index < size && iter->n < value)
 	{
 		printf("Value checked at index [%ld] = [%d]\n", iter->index, iter->n);
 		iter = helper(iter, 1);
-		sqt += 1;
+		if (!iter->next)
+			break;
 	}
-	if (iter && iter->n == value)
+	if (iter->n == value)
 	{
 		printf("Value checked at index [%ld] = [%d]\n", iter->index, iter->n);
 		return (iter);
