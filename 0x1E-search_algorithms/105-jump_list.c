@@ -1,10 +1,14 @@
 #include <math.h>
 #include <stdio.h>
+#include "search_algos.h"
 
 listint_t *helper(listint_t *list, size_t iteration)
 {
+	size_t i;
+
 	for (i = 0; i < iteration; i++)
-		list = list->next;
+		if (list->next)
+			list = list->next;
 	return (list);
 }
 /**
@@ -17,30 +21,33 @@ listint_t *helper(listint_t *list, size_t iteration)
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
 	size_t b = (size_t)sqrt(size);
-	size_t a = 0;
 	size_t sqt = 0;
-	listint_t *iter = helper(list, b);
+	listint_t *iter = list;
 
-	while (iter->n < value && a < size)
+	if (!list)
+		return (NULL);
+	iter = helper(list, b);
+	while (iter && iter->index < size && iter->n < value)
 	{
-		printf("Value checked at index [%ld] = [%d]\n", a, iter->n);
-		sqt = a;
-		a = a + b;
+		printf("Value checked at index [%ld] = [%d]\n", iter->index, iter->n);
+		sqt = iter->index;
 		iter = helper(iter, b);
 	}
-	printf("Value found between indexes [%ld] and [%ld]\n", sqt, a);
+	printf("Value checked at index [%ld] = [%d]\n", iter->index, iter->n);
+	printf("Value found between indexes [%ld] and [%ld]\n", sqt, iter->index);
+
 	iter = helper(list, sqt);
-	while (iter->n < value && a < size)
+	while (iter && iter->index < size && iter->n < value)
 	{
-		printf("Value checked at index [%ld] = [%d]\n", sqt, iter->n);
+		printf("Value checked at index [%ld] = [%d]\n", iter->index, iter->n);
 		iter = helper(iter, 1);
 		sqt += 1;
 	}
-	if (iter->n == value)
+	if (iter && iter->n == value)
 	{
-		printf("Value checked at index [%ld] = [%d]\n", sqt, iter->n);
-		return (sqt);
+		printf("Value checked at index [%ld] = [%d]\n", iter->index, iter->n);
+		return (iter);
 	}
-	printf("Value checked at index [%ld] = [%d]\n", sqt, iter->n);
-	return (-1);
+	printf("Value checked at index [%ld] = [%d]\n", iter->index, iter->n);
+	return (NULL);
 }

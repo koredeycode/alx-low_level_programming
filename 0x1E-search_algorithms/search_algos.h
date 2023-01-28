@@ -20,4 +20,7 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 listint_t *jump_list(listint_t *list, size_t size, int value);
+listint_t *create_list(int *array, size_t size);
+void free_list(listint_t *list);
+void print_list(const listint_t *list);
 #endif
